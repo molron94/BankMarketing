@@ -57,7 +57,7 @@ Looking at the confusion matrix below, you can see that the model predicts 'True
 
 Note: P True and P False are predictions of the model, True/False are ground truths
 
-![alt text](https://github.com/molron94/BankMarketing/blob/master/Bank%20Project%20Confusion%20Matrix.png)
+![alt text](https://github.com/molron94/BankMarketing/blob/master/Bank%20Confusion%20Matrix.png)
 
 
 
