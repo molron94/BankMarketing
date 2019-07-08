@@ -45,7 +45,7 @@ All models seemed to perform similarly well, giving me f1 scores in the range of
 
 ### Step 3: Validation
 
-On my validation set, my model f1 scores dropped sharply, with most models giving me an f1 score around 0.45. This is to be expected, as the validation set has imbalanced classes, whereas the training set did not. A noteable exception was KNN, which gave me a validation f1 score of only 0.3. It is possible that using the parameters from ridge regression to boost certain features led to over fitting. 
+On my validation set, my model f1 scores dropped sharply, with most models giving me an f1 score around 0.45. This is to be expected, as the validation set has imbalanced classes, whereas the training set did not. A noteable exception was KNN, which gave me a validation f1 score of only 0.38. It is possible that using the parameters from ridge regression to boost certain features led to over fitting. 
 
 I also attempted to use ensemble models to improve my score. I tried using 7 models, 5 models, and 3 models and taking their majority vote to predict y. 7 models did slightly better than 5 and 3, but did similarly well to my best single model in validation, ada boost. Finally, I corrected for the class imbalance in the validation set, and ran logistic regression and ada boost on my model predictions, to try and better predict my target. This gave me an f1 score of 0.71, but this is at the lower end of the single models, when they were tested on a balanced dataset. Before I corrected for the class imbalance, both models were predicting the majority class 100% of the time, giving me an f1 score of 0. 
 
