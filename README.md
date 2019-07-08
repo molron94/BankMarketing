@@ -51,7 +51,14 @@ I also attempted to use ensemble models to improve my score. I tried using 7 mod
 
 ### Step 4: Testing 
 
-Since the 7 vote and ada boost seemed to do the best, and the 7 vote was likely more resilient to over fitting, I decided to use the 7 vote on my testing set. I also ran all the models individually, just to see the result, and once again, 7 vote and ada boost were very similar to each other, and also the best performing models. I had a testing f1 score of 0.45 using the votes from 7 models. I feel this is not bad given how arbitrary people buying a product from a phone call can be. My accuracy score is 0.82, lower than only predicting the majority class (0.89), suggesting that the model does a good job of zooming in on likely buyers. 
+Since the 7 vote and ada boost seemed to do the best, and the 7 vote was likely more resilient to over fitting, I decided to use the 7 vote on my testing set. I also ran all the models individually, just to see the result, and once again, 7 vote and ada boost were very similar to each other, and also the best performing models. I had a testing f1 score of 0.45 using the votes from 7 models. I feel this is not bad given how arbitrary people buying a product from a phone call can be. 
+
+Looking at the confusion matrix below, you can see that the model predicts 'True', i.e. will buy a product, 20% of the time, and only 7/20 actually end up buying the product, a 35% success rate. While that seems low, we have kept in around 2/3rds of the successes (7/11), while selecting only 20% of the customers. As the bank normally has an 11% success rate on their marketing calls, if they optimised using this model, their success rate would more than triple!
+
+Note: P True and P False are predictions of the model, True/False are ground truths
+
+![alt text](https://github.com/molron94/BankMarketing/blob/master/Bank%20Project%20Confusion%20Matrix.png)
+
 
 
 
